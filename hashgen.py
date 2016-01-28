@@ -12,7 +12,6 @@ while use_hash not in avial_hash:
     use_hash = input("Select an algorithm to use: [%s]") %(default_hash)
     if use_hash == "": use_hash = default_hash; break
 
-file_path = input("Enter a valid file path: ")
 while os.path.isfile(file_path) is False:
     file_path = input("Enter a valid file path: ")
 
