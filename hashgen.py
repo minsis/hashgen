@@ -14,7 +14,7 @@ for k, v in enumerate(avial_hash, start=1):
     print("({}) {}".format(k,v))
 
 while use_hash not in avial_hash:
-    use_hash = input("Select an algorithm to use[{}]".format(default_hash))
+    use_hash = input("Select an algorithm to use [{}]: ".format(default_hash))
     if use_hash == "": use_hash = default_hash; break
 
 while os.path.isfile(file_path) is False:
