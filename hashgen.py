@@ -13,7 +13,8 @@ while use_hash not in avial_hash:
     if use_hash == "": use_hash = default_hash; break
 
 while os.path.isfile(file_path) is False:
-    file_path = input("Enter a valid file path: ")
+    file_path = input("Enter a valid file path (type exit to quit): ")
+    if file_path == "exit": print("Exiting"); exit()
 
 start_time = time.time()
 sha1hash(file_path)
