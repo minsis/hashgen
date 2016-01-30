@@ -21,7 +21,7 @@ while os.path.isfile(file_path) is False:
     file_path = input("Enter a valid file path (type exit to quit): ")
     if file_path == "exit": print("Exiting"); exit()
 
-compare_hash = input("Hash value to compare (enter to skip)")
+compare_hash = input("Hash value to compare (enter to skip): ")
 
 avial_hash = convert_to_dict(avial_hash)
 
