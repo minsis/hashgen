@@ -78,4 +78,11 @@ def sha512hash(file_path):
     print("sha512 hash: " + sha512_hash)
     return sha512_hash
 
+def convert_to_dict(hash_list):
+    hash_dict = dict()
+    for hash_type in hash_list:
+        hash_dict[hash_type] = hash_type
+    return hash_dict
+
+
 def compare(hash):
