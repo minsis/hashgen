@@ -78,5 +78,8 @@ def convert_to_dict(hash_list):
         hash_dict[hash_type] = globals()[hash_type]
     return hash_dict
 
-
-#def compare(hash):
+def compare(compare_hash, hash_value):
+    if compare_hash == hash_value:
+        print("Your hash values match")
+    else:
+        print("Your hash values do not match")
