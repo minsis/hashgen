@@ -75,7 +75,7 @@ def sha512(file_path):
 def convert_to_dict(hash_list):
     hash_dict = dict()
     for hash_type in hash_list:
-        hash_dict[hash_type] = hash_type
+        hash_dict[hash_type] = globals()[hash_type]
     return hash_dict
 
 

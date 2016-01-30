@@ -24,6 +24,6 @@ while os.path.isfile(file_path) is False:
 avial_hash = convert_to_dict(avial_hash)
 
 start_time = time.time()
-hash_value = md5(file_path) #avial_hash[use_hash](file_path)
+hash_value = avial_hash[use_hash](file_path)
 print("Your {} hash value is: {}".format(use_hash,hash_value))
 print("Execution Time: {} seconds".format(time.time() - start_time))
