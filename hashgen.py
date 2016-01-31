@@ -2,8 +2,7 @@ import os
 import time
 from libs.hashinglib import *
 
-avial_hash = ["sha384", "sha224", "md5", "sha512", "sha1", "sha256"]
-avial_hash.sort()
+avial_hash = get_hashes()
 dict_hash = dict()
 default_hash = "md5"
 use_hash = str()
