@@ -10,7 +10,7 @@ def read_file(file_path, hashed_file):
     return hashed_file.hexdigest()
 
 def run_hash(file_path, algo_hash):
-    hashed_file = hashlib.new("algo_hash")
+    hashed_file = hashlib.new(algo_hash)
     return read_file(file_path, hashed_file)
 
 def convert_to_dict(hash_list):
@@ -27,8 +27,11 @@ def compare(compare_hash, hash_value):
 
 def get_hashes():
     builtin_hash = list(hashlib.algorithms_guaranteed)
-    avial_hash = list(hashlib.algorithms_available)
-    for item in openssl_hash:
-        if item.upper() in openssl_hash:
-            avial_hash.remove(item.upper)
-    avial_hash.sort()
+    all_hash = list(hashlib.algorithms_available)
+
+    for item in builtin_hash:
+        if item.upper() in all_hash:
+            all_hash.remove(item.upper())
+
+    all_hash.sort()
+    return all_hash

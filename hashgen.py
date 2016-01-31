@@ -22,10 +22,11 @@ while os.path.isfile(file_path) is False:
 
 compare_hash = input("Hash value to compare (enter to skip): ")
 
-avial_hash = convert_to_dict(avial_hash)
+#avial_hash = convert_to_dict(avial_hash)
 
 start_time = time.time()
-hash_value = avial_hash[use_hash](file_path)
+#hash_value = avial_hash[use_hash](file_path)
+hash_value = run_hash(file_path, use_hash)
 stop_time = time.time() - start_time
 
 print("Your {} hash value is: {}".format(use_hash,hash_value))
