@@ -8,30 +8,6 @@ def read_file(file_path, hashed_file):
             hashed_file.update(read_byte)
             read_byte = open_file.read(1048576)
     return hashed_file.hexdigest()
-    
-def md5(file_path):
-    hashed_file = hashlib.md5()
-    return read_file(file_path, hashed_file)
-
-def sha1(file_path):
-    hashed_file = hashlib.sha1()
-    return read_file(file_path, hashed_file)
-
-def sha224(file_path):
-    hashed_file = hashlib.sha224()
-    return read_file(file_path, hashed_file)
-
-def sha256(file_path):
-    hashed_file = hashlib.sha256()
-    return read_file(file_path, hashed_file)
-
-def sha384(file_path):
-    hashed_file = hashlib.sha384()
-    return read_file(file_path, hashed_file)
-
-def sha512(file_path):
-    hashed_file = hashlib.sha512()
-    return read_file(file_path, hashed_file)
 
 def run_hash(file_path, algo_hash):
     hashed_file = hashlib.new("algo_hash")
