@@ -35,3 +35,9 @@ def get_hashes():
 
     all_hash.sort()
     return all_hash
+
+def format_hash(all_hash):
+    tmp_lst = list()
+    for item in all_hash:
+        tmp_lst.append(item.lower())
+    return tmp_lst

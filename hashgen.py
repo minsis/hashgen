@@ -12,6 +12,8 @@ print("List of available hash algorithms")
 for k, v in enumerate(avial_hash, start=1):
     print("({}) {}".format(k,v))
 
+#avial_hash = format_hash(avial_hash)
+
 while use_hash not in avial_hash:
     use_hash = input("Select an algorithm to use [{}]: ".format(default_hash))
     if use_hash == "": use_hash = default_hash; break
@@ -22,10 +24,7 @@ while os.path.isfile(file_path) is False:
 
 compare_hash = input("Hash value to compare (enter to skip): ")
 
-#avial_hash = convert_to_dict(avial_hash)
-
 start_time = time.time()
-#hash_value = avial_hash[use_hash](file_path)
 hash_value = run_hash(file_path, use_hash)
 stop_time = time.time() - start_time
 
